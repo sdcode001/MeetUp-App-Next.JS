@@ -44,7 +44,7 @@ export async function getStaticProps(context){   // next/router hook can only be
    const meetupID=context.params.meetupID
 
    //connceting to the MongoDB database and fetching data.
-   const clint=await MongoClient.connect('mongodb+srv://sdcode001:ZlDtftXH13xexart@cluster0.3yr72o9.mongodb.net/database1?retryWrites=true&w=majority')
+   const clint=await MongoClient.connect('mongodb+srv://sdcode001:j92txQCN7mUJWGmx@cluster0.3yr72o9.mongodb.net/database1?retryWrites=true&w=majority')
    const db=clint.db()
    const result=await db.collection('meetups').findOne({ _id: ObjectId(meetupID)})
    clint.close()
