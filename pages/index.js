@@ -21,7 +21,7 @@ return (
 
 export async function getStaticProps(){
    // as this getsatticProps runs only on server so we can directiely fetch data from mongoDB with out using API call
-  const client= await MongoClient.connect('mongodb+srv://sdcode001:ZlDtftXH13xexart@cluster0.3yr72o9.mongodb.net/database1?retryWrites=true&w=majority')
+  const client= await MongoClient.connect('mongodb+srv://sdcode001:j92txQCN7mUJWGmx@cluster0.3yr72o9.mongodb.net/database1?retryWrites=true&w=majority')
         const db=client.db()
         const result= await db.collection('meetups').find().toArray()
         client.close()
