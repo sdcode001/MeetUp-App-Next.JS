@@ -26,7 +26,7 @@ function Detailpage(props){
 }
 
 export async function getStaticPaths(){
-   const clint=await MongoClient.connect('mongodb+srv://sdcode001:ZlDtftXH13xexart@cluster0.3yr72o9.mongodb.net/database1?retryWrites=true&w=majority')
+   const clint=await MongoClient.connect('mongodb+srv://sdcode001:j92txQCN7mUJWGmx@cluster0.3yr72o9.mongodb.net/database1?retryWrites=true&w=majority')
    const db=clint.db()
    const result=await db.collection('meetups').find({},{_id:1}).toArray()           
    clint.close()
